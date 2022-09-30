@@ -8,13 +8,13 @@
   <body>
     <!--хедер сайта с навигацией-->
     <header class="page-header">
-      <a class="navigation-logo" href="index.html">
+      <a class="navigation-logo" href="#">
         <img class="page-header-logo" src="" alt="Логотип города Седона">
       </a>
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-link" href="#">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
@@ -27,16 +27,12 @@
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span class="visually-hidden">
-                Поиск
-              </span>
+              <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span class="visually-hidden">
-                Избранное
-              </span>
+              <span class="visually-hidden">Избранное</span>
             </a>
           </li>
           <li class="navigation-item">
@@ -49,7 +45,9 @@
     <!--блок hero главной страницы-->
     <main class="main-index">
       <h1 class="visually-hidden">Город Седона</h1>
-      <img class="logo" src="" alt="Логотип города Седона">
+      <div class="main-hero">
+        <img class="logo" src="" alt="Логотип города Седона">
+      </div>
 
       <section class="description">
         <h2 class="description-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
@@ -83,18 +81,15 @@
         </ul>
 
         <ul class="reccomendations-list">
-          <li class="reccomendations-item">
-            <img class="logo-housing" src="" alt="Иконка жилья">
+          <li class="reccomendations-item reccomendations-item-icon-housing">
             <h3 class="reccomendations-title">Жильё</h3>
             <p class="reccomendations-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
-          <li class="reccomendations-item">
-            <img class="logo-food" src="" alt="Иконка еды">
+          <li class="reccomendations-item reccomendations-item-icon-food">
             <h3 class="reccomendations-title">Еда</h3>
             <p class="reccomendations-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
-          <li class="reccomendations-item">
-            <img class="logo-souvenirs" src="" alt="Иконка сувениров">
+          <li class="reccomendations-item reccomendations-item-icon-souvenir">
             <h3 class="reccomendations-title">Сувениры</h3>
             <p class="reccomendations-description">Не только китайского, но и настоящего местного производства!</p>
           </li>
@@ -105,7 +100,7 @@
       <section class="hotel-search">
         <h2 class="hotel-search-title">Заинтересовались?</h2>
         <p class="hotel-search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="hotel-search-button" href="#">ПОИСК ГОСТИНИЦЫ В седоне</a>
+        <a class="hotel-search-button" href="#">Поиск гостиницы в Седоне</a>
       </section>
     </main>
 
@@ -117,9 +112,7 @@
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="newsletter-email">Email</label>
           <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
-          <button class="button newsletter-button" type="submit">
-            Подписаться
-          </button>
+          <button class="button newsletter-button" type="submit">Подписаться</button>
         </form>
       </section>
 
@@ -142,9 +135,7 @@
             </a>
           </li>
         </ul>
-        <a class="footer-phone" href="tel:+78128121212">
-          +7 (812) 812-12-12
-        </a>
+        <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <a class="footer-htmlacademy-link" href="https://htmlacademy.ru/">
           <img class="htmlacademy-logo" src="" alt="Лого HTML Academy">
         </a>
