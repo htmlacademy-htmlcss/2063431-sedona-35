@@ -116,8 +116,6 @@ body {
 }
 
 .main-hero {
-  width: 1200px;
-  margin: 0 auto;
   background-color: #505050;
   background-image: url("../images/bg-index-vector.svg"), url("../images/bg-index.jpg");
   background-repeat: no-repeat, no-repeat;
@@ -150,12 +148,17 @@ body {
   text-align: center;
 }
 
-.features-item  {
+.features-item {
+  display: flex;
+}
+
+.features-wrapper {
   width: 400px;
 }
 
 .features-image {
   display: block;
+  width: 800px;
 }
 
 .features-item-lt-grey {
@@ -233,14 +236,10 @@ body {
 
 .page-footer-container {
   display: flex;
-  flex-wrap: wrap;
-  width: 1200px;
-  margin: 0 auto;
+  flex-direction: column;
 }
 
 .newsletter {
-  width: 1200px;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -294,13 +293,15 @@ body {
 }
 
 .footer-phone {
-  text-align: center;
-  margin: 0 auto;
-  width: 720px;
   font-size: 40px;
   line-height: 40px;
   color: #000000;
   text-decoration: none;
+}
+
+.footer-phone-wrapper {
+  text-align: center;
+  width: 720px;
 }
 
 .footer-htmlacademy-link {
@@ -317,8 +318,6 @@ body {
 /* внутренний хедер и фильтрация */
 
 .index-columns {
-  width: 1200px;
-  margin: 0 auto;
   background-image: url("../images/bg-catalog.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -335,11 +334,6 @@ body {
 .breadcrumbs-link {
   font-size: 16px;
   color: #ffffff;
-}
-
-.catalog-hotels {
-  display: flex;
-  flex-direction: column;
 }
 
 .catalog-filter-list {
@@ -380,8 +374,12 @@ body {
 
 /* блок результатов поиска */
 
-.hotels-count,
-.hotels-count-number {
+.hotel-display {
+  display: flex;
+}
+
+.hotel-count,
+.hotel-count-number {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -426,14 +424,16 @@ body {
 }
 
 .pagination-item {
-  width: 60px;
   margin-right: 8px;
 }
 
 .pagination-link {
+  display: block;
+  text-align: center;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
+  width: 60px;
   background-color: #82B3D3;
   color: #ffffff;
   text-decoration: none;
