@@ -18,22 +18,18 @@
 
 html {
   height: 100%;
-  width: 1283px;
-  background-color: #F2F2F2;
-  margin: 0 auto;
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  width: 1200px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color:  #000000;
-  background-color: #ffffff;
+  background-color: #F2F2F2;
 }
 
 /* Основной стиль кнопок */
@@ -52,14 +48,12 @@ body {
 
 /* Стили хедера и навигации */
 
-.page-header {
-  background-color: #ffffff;
-}
 
 .navigation {
   display: flex;
   width: 1200px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
 .navigation-logo {
@@ -100,14 +94,11 @@ body {
   flex-grow: 1;
 }
 
-.main-index {
-  background-color: #ffffff;
-}
-
 /* контейнер главной страницы */
 .page-container {
   width: 1200px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
 .logo {
@@ -230,15 +221,10 @@ body {
 
 /* Подписка и футер */
 
-.page-footer {
-  background-color: #ffffff;
-}
-
 .page-footer-container {
-  display: flex;
-  flex-direction: column;
   width: 1200px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
 .newsletter {
