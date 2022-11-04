@@ -535,8 +535,6 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
-.footer-logo
-
 /* каталог */
 
 /* внутренний хедер и фильтрация */
@@ -572,6 +570,15 @@ body {
 .breadcrumbs-link {
   font-size: 16px;
   color: #ffffff;
+  text-decoration: none;
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .breadcrumbs-icon-home {
@@ -693,6 +700,19 @@ body {
   border-radius: 4px;
 }
 
+.hotel-display .button-selected {
+  border: 2px solid #000000;
+}
+
+.hotel-display .button:focus {
+  border: 2px solid #68A2CA;
+}
+
+.hotel-display .button:hover,
+.hotel-display .button:active {
+  border: 2px solid #000000;
+}
+
 .hotel-count,
 .hotel-count-number {
   margin: 0;
@@ -777,6 +797,7 @@ body {
   grid-column: 1 / -1;
   color: #000000;
   text-decoration: none;
+  outline: none;
 }
 
 .hotel-card-title {
@@ -897,12 +918,41 @@ body {
   border-radius: 4px;
 }
 
+.pagination-link:focus,
+.pagination-link:hover {
+  background-color: #68A2CA;;
+  border: 1px solid #82B3D3;
+  border-radius: 4px;
+  outline: none;
+  padding: 11px;
+}
+
+.pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .pagination-current {
   color: #000000;
   background-color: #F2F2F2;
 }
 
+.pagination-current:focus,
+.pagination-current:hover,
+.pagination-current:active {
+  border: none;
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
 .pagination-all {
+  color: #000000;
+  background: none;
+}
+
+.pagination-all:focus,
+.pagination-all:hover,
+.pagination-all:active {
+  border: none;
   color: #000000;
   background: none;
 }
