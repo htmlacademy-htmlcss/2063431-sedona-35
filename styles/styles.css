@@ -282,11 +282,17 @@ body {
   display: flex;
 }
 
+.features-wrapper {
+  position: relative;
+  width: 400px;
+}
+
 .features-title-line::after {
+  content: "";
+  position: absolute;
   display: block;
   margin: 0 auto;
-  transform: translateY(30px);
-  content: "";
+  transform: translateY(30px) translateX(60px);
   width: 60px;
   height: 2px;
   background-color: rgba(0, 0, 0, 0.3);
@@ -294,10 +300,6 @@ body {
 
 .features-title-white::after {
   background-color: rgba(255, 255, 255, 0.3);
-}
-
-.features-wrapper {
-  width: 400px;
 }
 
 .features-image {
@@ -459,7 +461,7 @@ body {
   color: #333333;
 }
 
-.newsletter-field {
+.newsletter-form .field {
   box-sizing: border-box;
   float: left;
   width: 452px;
@@ -659,8 +661,7 @@ body {
   position: relative;
 }
 
-.arrival-form-field,
-.departure-form-field {
+.field-group .field {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -947,8 +948,12 @@ body {
 }
 
 .catalog-filter-list {
+  padding: 0;
+  margin: 0;
   list-style-type: none;
 }
+
+/* блок фильтров поиска */
 
 .catalog-filter {
   display: flex;
@@ -967,6 +972,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+  margin-bottom: 32px;
 }
 
 .catalog-filter-item {
@@ -978,10 +984,175 @@ body {
   flex-direction: column;
 }
 
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  margin-bottom: 16px;
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: none;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control:hover .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control-input:focus + .control-mark {
+  outline: 3px solid #83B3D3;
+}
+
+.control-input:active + .control-mark {
+  opacity: 0.3;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/icons/control-checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3F5E72;
+}
+
+/* range-слайдер */
+
+.range-scale {
+  position: relative;
+  width: 287px;
+  height: 4px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 78px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.range-toggle:focus {
+  outline: 3px solid #83B3D3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.range-toggle:active {
+  outline: 2px solid #83B3D3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -8px;
+  right: 0;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: center;
+}
+
+.catalog-filter-label {
+  display: flex;
+  position: relative;
+}
+
+.range-input {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  box-sizing: border-box;
+  width: 143px;
+  height: 48px;
+  padding: 12px 20px;
+  margin-right: 2px;
+  margin-bottom: 36px;
+  border: none;
+  appearance: textfield;
+}
+
+.range-input:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.range-input:active {
+  outline: 2px solid #000000;
+}
+
+.range-text {
+  font: inherit;
+  padding: 12px 20px;
+  text-align: right;
+  position: absolute;
+  color: #000000;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.range-input-min {
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input-max {
+  border-radius: 0 4px 4px 0;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* кнопки применения и сброса настроек сортировки */
+
 .button-catalog-apply {
   font-size: 16px;
   line-height: 20px;
   padding: 8px 50px;
+  margin-top: 56px;
   margin-bottom: 36px;
   background-color: #82B3D3;
 }
