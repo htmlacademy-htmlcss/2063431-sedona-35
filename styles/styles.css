@@ -1015,8 +1015,9 @@ body {
   opacity: 0.3;
 }
 
-input[type="radio"]:disabled + label  {
-  opacity: 0.2;
+.control-input:disabled + .control-mark,
+.control-input:disabled ~ .control-label {
+  opacity: 0.1;
   cursor: default;
 }
 
