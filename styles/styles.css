@@ -1363,8 +1363,7 @@ body {
 }
 
 .favorite {
-  padding: 8px 20px;
-  text-align: justify;
+  padding: 8px 0;
   grid-column: 2 / 3;
   background-color: #82B3D3;
 }
