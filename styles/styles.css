@@ -1364,6 +1364,7 @@ body {
 
 .favorite {
   padding: 8px 20px;
+  text-align: justify;
   grid-column: 2 / 3;
   background-color: #82B3D3;
 }
