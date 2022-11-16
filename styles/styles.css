@@ -98,13 +98,8 @@ body {
   margin-right: 28px;
 }
 
-.navigation-logo:focus,
-.navigation-logo:hover {
-  transform: scale(1.05);
-}
-
 .navigation-logo:active {
-  transform: scale(1);
+  transform: scale(1.05);
 }
 
 .navigation-link {
@@ -188,13 +183,8 @@ body {
   left: 17px;
 }
 
-.navigation-link-scale:focus,
-.navigation-link-scale:hover {
-  transform: scale(1.2);
-}
-
 .navigation-link-scale:active {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* позиционирование блока навигации */
@@ -245,6 +235,7 @@ body {
   background-image: url("../images/bg-index-vector.svg"), url("../images/bg-index.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: center bottom, center;
+  background-size: 1200px 57px, 1200px 485px;
 }
 
 .description-title {
@@ -597,6 +588,10 @@ body {
   background: rgba(242, 242, 242, 0.8);
 }
 
+.modal-container-close {
+  display: none;
+}
+
 .modal {
   position: relative;
   margin: auto;
@@ -692,11 +687,16 @@ body {
   font-weight: 700;
 }
 
-.modal-field:focus {
+.field-group .field:focus {
   outline: 3px solid #83B3D3;
+  background-color: #E6E6E6;
 }
 
-.modal-field:active {
+.field-group .field:hover {
+  background-color: #E6E6E6;
+}
+
+.field-group .field:active {
   outline: 2px solid #000000;
 }
 
@@ -754,19 +754,14 @@ body {
   padding: 9px 3px;
 }
 
-.button-wrapper {
-  width: 20px;
-  height: 20px;
-}
-
 .field-button:hover {
   color: #000000;
 }
 
-.field-button:focus > .button-wrapper {
-  border: 3px solid #82B3D3;
+.field-button:focus > .button-minus,
+.field-button:focus > .button-plus {
+  outline: 3px solid #82B3D3;
   border-radius: 4px;
-
 }
 
 .field-button:focus {
@@ -852,7 +847,7 @@ body {
 .tooltip-text {
   background-color: #333333;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 17px;
   font-weight: normal;
   text-transform: none;
@@ -989,6 +984,7 @@ body {
   display: block;
   padding-left: 36px;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 
 .control-mark {
@@ -1000,6 +996,7 @@ body {
   background-color: #ffffff;
   border-radius: 4px;
   border: none;
+
 }
 
 .control-input[type="radio"] + .control-mark {
@@ -1007,15 +1004,21 @@ body {
 }
 
 .control:hover .control-mark {
-  background-color: rgba(255, 255, 255, 0.6);
+  opacity: 0.6;
 }
 
 .control-input:focus + .control-mark {
   outline: 3px solid #83B3D3;
 }
 
-.control-input:active + .control-mark {
+.control:active {
   opacity: 0.3;
+}
+
+.control-input:disabled + .control-mark,
+.control-input:disabled ~ .control-label {
+  opacity: 0.1;
+  cursor: default;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::before {
